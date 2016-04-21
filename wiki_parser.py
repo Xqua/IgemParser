@@ -78,9 +78,13 @@ class TeamPage(HTMLParser):
 
         if tag == 'a' and self.start_pi:
             self.record = True
-        if tag == 'TD' and self.start_pi:
-            if attrs['style'] == "width:200px":
-                self.record = True
+
+        if tag == 'a' and self.start_inst:
+            self.record = True
+
+        if tag == 'tr' and self.start_2pi:
+            self.record = True
+            self.tmp = []
 
     def handle_endtag(self, tag):
         print "Encountered an end tag :", tag
@@ -90,9 +94,10 @@ class TeamPage(HTMLParser):
             self.start2 = False
             # self.res.append(self.tmp)
             # print 'res', self.res
-        if self.start_pi or self.start_2pi and tag == 'tr':
+        if self.start_pi or self.start_2pi and self.record and tag == 'tr':
             self.start_pi = False
             self.start_2pi = False
+            self.record = False
 
     def handle_data(self, data):
         print "Encountered some data  :", data
@@ -111,11 +116,21 @@ class TeamPage(HTMLParser):
             self.start_pi = True
         if "Instructors" in data:
             self.start_inst = True
+        if "Student Leaders" in data:
+            self.start_inst = False
+            self.res.append(";".join(self.tmp))
         if "Student Members" in data:
             self.start_end = True
+        if self.start_2pi and self.record:
+            if data == 'None designated':
+                self.res.append("None")
+                self.res.append("None")
+            else:
+                self.res.append(data)
         if self.start_pi and self.record:
             self.res.append(data)
-            self.record = False
+        if self.start_inst and self.record:
+            self.tmp.append(data)
 
 
 class UserContribution(HTMLParser):
