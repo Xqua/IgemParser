@@ -1,0 +1,80 @@
+Team ID , Team  , Region , Country , Track , Section , Size , Status
+102,Alberta_NINT,North America,Canada,,IGEM,12,Accepted
+80,Bay_Area_RSI,North America,United States,,IGEM,5,Accepted
+135,BCCS-Bristol,Europe,United Kingdom,,IGEM,24,Accepted
+78,Beijing_Normal,Asia,China,,IGEM,7,Accepted
+79,Bologna,Europe,Italy,,IGEM,16,Accepted
+124,Brown,North America,United States,,IGEM,7,Accepted
+165,BrownTwo,North America,United States,,IGEM,5,Accepted
+107,Calgary_Ethics,North America,Canada,,IGEM,4,Accepted
+148,Calgary_Software,North America,Canada,,IGEM,8,Accepted
+131,Calgary_Wetware,North America,Canada,,IGEM,5,Accepted
+137,Caltech,North America,United States,,IGEM,8,Accepted
+90,Cambridge,Europe,United Kingdom,,IGEM,19,Accepted
+84,Chiba,Asia,Japan,,IGEM,13,Accepted
+159,Colombia,Latin America,Colombia,,IGEM,16,Accepted
+88,CPU-NanJing,Asia,China,,IGEM,9,Accepted
+91,Davidson-Missouri_Western,North America,United States,,IGEM,19,Accepted
+158,Duke,North America,United States,,IGEM,9,Accepted
+118,Edinburgh,Europe,United Kingdom,,IGEM,11,Accepted
+92,EPF-Lausanne,Europe,Switzerland,,IGEM,14,Accepted
+105,ESBS-Strasbourg,Europe,France,,IGEM,10,Accepted
+142,ETH_Zurich,Europe,Switzerland,,IGEM,12,Accepted
+157,Freiburg,Europe,Germany,,IGEM,15,Accepted
+77,Groningen,Europe,Netherlands,,IGEM,10,Accepted
+152,Guelph,North America,Canada,,IGEM,8,Accepted
+98,Harvard,North America,United States,,IGEM,18,Accepted
+125,Hawaii,North America,United States,,IGEM,6,Accepted
+150,Heidelberg,Europe,United States,,IGEM,30,Accepted
+113,HKUSTers,Asia,Hong Kong,,IGEM,15,Accepted
+94,iHKU,Asia,Hong Kong,,IGEM,17,Accepted
+86,IIT_Madras,Asia,India,,IGEM,8,Accepted
+126,Illinois,North America,United States,,IGEM,18,Accepted
+143,Imperial_College,Europe,United Kingdom,,IGEM,15,Accepted
+110,Johns_Hopkins,North America,United States,,IGEM,16,Accepted
+145,KULeuven,Europe,Belgium,,IGEM,25,Accepted
+127,Kyoto,Asia,Japan,,IGEM,11,Accepted
+119,LCG-UNAM-Mexico,Latin America,Mexico,,IGEM,16,Accepted
+155,Lethbridge_CCS,North America,Canada,,IGEM,6,Accepted
+85,Melbourne,Asia,Australia,,IGEM,6,Accepted
+129,METU_Turkey,Europe,Turkey,,IGEM,11,Accepted
+134,Mexico-UNAM-IPN,Latin America,Mexico,,IGEM,15,Accepted
+138,Michigan,North America,United States,,IGEM,14,Accepted
+101,Minnesota,North America,United States,,IGEM,25,Accepted
+144,Mississippi_State,North America,United States,,IGEM,14,Accepted
+146,Missouri_Miners,North America,United States,,IGEM,16,Accepted
+128,MIT,North America,United States,,IGEM,15,Accepted
+104,Newcastle_University,Europe,United Kingdom,,IGEM,16,Accepted
+117,NTU-Singapore,Asia,Singapore,,IGEM,9,Accepted
+116,NYMU-Taipei,Asia,Taiwan,,IGEM,18,Accepted
+136,Paris,Europe,France,,IGEM,24,Accepted
+120,Peking_University,Asia,China,,IGEM,16,Accepted
+100,PennState,North America,United States,,IGEM,10,Accepted
+97,Polytech,North America,United States,,IGEM,1,Dropped
+160,Prairie_View,North America,United States,,IGEM,6,Accepted
+76,Princeton,North America,Netherlands,,IGEM,15,Accepted
+154,Purdue,North America,United States,,IGEM,11,Accepted
+122,Rice_University,North America,United States,,IGEM,13,Accepted
+133,Slovenia,Europe,Slovenia,,IGEM,14,Accepted
+162,Sofia_BG,Europe,Bulgaria,,IGEM,2,Dropped
+132,Tianjin,Asia,China,,IGEM,34,Accepted
+121,Tokyo_Tech,Asia,Japan,,IGEM,16,Accepted
+108,Tsinghua,Asia,China,,IGEM,25,Accepted
+115,TUDelft,Europe,Netherlands,,IGEM,12,Accepted
+106,UCSF,North America,United States,,IGEM,26,Accepted
+112,UC_Berkeley,North America,United States,,IGEM,13,Accepted
+111,UC_Berkeley_Tools,North America,United States,,IGEM,6,Accepted
+81,UNIPV-Pavia,Europe,Italy,,IGEM,5,Accepted
+123,University_of_Alberta,North America,Canada,,IGEM,13,Accepted
+163,University_of_Chicago,North America,United States,,IGEM,9,Accepted
+147,University_of_Lethbridge,North America,Canada,,IGEM,15,Accepted
+149,University_of_Ottawa,North America,Canada,,IGEM,13,Accepted
+153,University_of_Sheffield,Europe,United Kingdom,,IGEM,9,Accepted
+109,University_of_Washington,North America,United States,,IGEM,14,Accepted
+82,USTC,Asia,China,,IGEM,11,Accepted
+89,Utah_State,North America,United States,,IGEM,12,Accepted
+141,Valencia,Europe,Spain,,IGEM,14,Accepted
+156,Virginia,North America,United States,,IGEM,9,Accepted
+103,Warsaw,Europe,Poland,,IGEM,11,Accepted
+93,Waterloo,North America,Canada,,IGEM,26,Accepted
+130,Wisconsin,North America,United States,,IGEM,18,Accepted

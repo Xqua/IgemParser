@@ -1,0 +1,260 @@
+Team ID , Team  , Region , Country , Track , Section , Size , Status
+1585,Aachen,Europe,Germany,Manufacturing,Overgrad,24,Accepted
+1655,Aalto-Helsinki,Europe,Finland,Energy,Undergrad,12,Accepted
+1751,AHUT_China,Asia,China,Food & Nutrition,Undergrad,37,Accepted
+1601,Aix-Marseille,Europe,France,Environment,Overgrad,24,Accepted
+1719,Amoy,Asia,China,Foundational Advance,Undergrad,19,Accepted
+1844,Amsterdam,Europe,Netherlands,Energy,Overgrad,7,Accepted
+1750,ANU-Canberra,Asia,Australia,Foundational Advance,Undergrad,12,Accepted
+1639,ATOMS-Turkiye,Europe,Turkey,Health & Medicine,Undergrad,31,Accepted
+1806,AUC_TURKEY,Europe,Turkey,High School,High School,12,Accepted
+1627,Austin_UTexas,North America,United States,Foundational Advance,Undergrad,16,Accepted
+1677,BABS_UNSW_Australia,Asia,Australia,New Application,Undergrad,8,Accepted
+1617,Berlin,Europe,Germany,Environment,Overgrad,13,Accepted
+1699,BGU_Israel,Asia,Israel,Health & Medicine,Overgrad,10,Accepted
+1758,Bielefeld-CeBiTec,Europe,Germany,Environment,Overgrad,15,Accepted
+1684,BIOSINT_Mexico,Latin America,Mexico,Art & Design,Undergrad,16,Accepted
+1846,Birkbeck,Europe,United Kingdom,Health & Medicine,Overgrad,10,Accepted
+1651,BIT,Asia,China,Health & Medicine,Undergrad,22,Accepted
+1675,BIT-China,Asia,China,New Application,Undergrad,26,Accepted
+1660,BNU-CHINA,Asia,China,Environment,Undergrad,33,Accepted
+1686,Bordeaux,Europe,France,Environment,Overgrad,24,Accepted
+1733,BostonU,North America,United States,Foundational Advance,Undergrad,10,Accepted
+1819,Brasil-USP,Latin America,Brazil,Environment,Overgrad,26,Accepted
+1813,British_Columbia,North America,Canada,Environment,Undergrad,21,Accepted
+1871,BroadRun-NorthernVA,North America,United States,High School,High School,9,Accepted
+1854,Cairo_Egypt,Africa,Egypt,Health & Medicine,Undergrad,22,Accepted
+1703,Cambridge-JIC,Europe,United Kingdom,Hardware,Undergrad,16,Accepted
+1732,Carnegie_Mellon,North America,United States,Measurement,Undergrad,12,Accepted
+1657,CAU_China,Asia,China,Foundational Advance,Undergrad,31,Accepted
+1762,CCA_SanDiego,North America,United States,High School,High School,12,Accepted
+1821,Central_Calgary,North America,Canada,High School,High School,14,Accepted
+1728,CGU_Taiwan,Asia,Taiwan,Health & Medicine,Overgrad,20,Accepted
+1603,Chalmers-Gothenburg,Europe,Sweden,New Application,Overgrad,17,Accepted
+1779,CHINA_CD_UESTC,Asia,China,Energy,Undergrad,15,Accepted
+1634,China_Tongji,Asia,China,New Application,Undergrad,13,Accepted
+1695,CityU_HK,Asia,Hong Kong,Health & Medicine,Undergrad,21,Accepted
+1664,Colegio_EmelinaU,Latin America,Chile,High School,High School,4,Accepted
+1848,Columbia_NYC,North America,United States,Food & Nutrition,Undergrad,6,Accepted
+1830,Concordia,North America,Canada,Foundational Advance,Overgrad,15,Accepted
+1834,Consort_Alberta,North America,Canada,High School,High School,7,Accepted
+1746,Cooper_Union,North America,United States,Hardware,Undergrad,13,Accepted
+1698,Cork_Ireland,Europe,Ireland,Health & Medicine,Undergrad,11,Accepted
+1595,Cornell,North America,United States,Environment,Undergrad,27,Accepted
+1702,CSU_Fort_Collins,North America,United States,Manufacturing,Undergrad,16,Accepted
+1718,CU_Boulder,North America,United States,Environment,Overgrad,18,Accepted
+1690,Czech_Republic,Europe,Czech Republic,Health & Medicine,Undergrad,15,Accepted
+1872,Dalhousie_Halifax_NS,North America,Canada,Manufacturing,Overgrad,11,Accepted
+1790,Danzi_Kesh_8,Asia,Israel,High School,High School,26,Accepted
+1716,DTU-Denmark,Europe,Denmark,Health & Medicine,Overgrad,16,Accepted
+1835,Duke,North America,United States,Foundational Advance,Undergrad,10,Accepted
+1590,Dundee,Europe,United Kingdom,New Application,Undergrad,15,Accepted
+1615,Edinburgh,Europe,United Kingdom,Health & Medicine,Undergrad,19,Accepted
+1584,Elan_Vital_Korea,Asia,Korea, Republic Of,High School,High School,11,Accepted
+1723,EPF_Lausanne,Europe,Switzerland,Information Processing,Undergrad,20,Accepted
+1847,ETH_Zurich,Europe,Switzerland,Health & Medicine,Overgrad,16,Accepted
+1611,Evry,Europe,France,Health & Medicine,Overgrad,11,Accepted
+1586,Exeter,Europe,United Kingdom,New Application,Undergrad,20,Accepted
+1864,FAFU-CHINA,Asia,China,Environment,Undergrad,19,Accepted
+1861,FAU_Erlangen,Europe,Germany,Health & Medicine,Undergrad,11,Accepted
+1621,Freiburg,Europe,Germany,Health & Medicine,Overgrad,32,Accepted
+1777,Fudan,Asia,China,Foundational Advance,Undergrad,17,Accepted
+1749,Gaston_Day_School,North America,United States,Environment,Undergrad,15,Accepted
+1870,GenetiX_Tec_CCM,Latin America,Mexico,High School,High School,14,Accepted
+1799,Genspace,North America,United States,Community Labs,Overgrad,24,Accepted
+1743,GeorgiaTech,North America,United States,Health & Medicine,Undergrad,11,Accepted
+1800,Georgia_State,North America,United States,Manufacturing,Overgrad,17,Accepted
+1859,Gifu,Asia,Japan,New Application,Undergrad,15,Accepted
+1725,Glasgow,Europe,United Kingdom,New Application,Undergrad,13,Accepted
+1865,Goettingen,Europe,Germany,New Application,Overgrad,13,Accepted
+1597,Groningen,Europe,Netherlands,Energy,Overgrad,11,Accepted
+1646,H4Z-Hangzhou,Asia,China,High School,High School,24,Accepted
+1827,HAFS-Korea,Asia,Korea, Republic Of,High School,High School,11,Accepted
+1860,Hamburg,Europe,Germany,Health & Medicine,Overgrad,11,Accepted
+1863,Hamilton_McMaster,North America,Canada,New Application,Undergrad,22,Accepted
+1671,Hangzhou-H14Z,Asia,China,High School,High School,12,Accepted
+1850,Harvard_BioDesign,North America,United States,Foundational Advance,Undergrad,10,Accepted
+1614,Heidelberg,Europe,Germany,Foundational Advance,Undergrad,19,Accepted
+1693,HFUT-China,Asia,China,Software,Undergrad,18,Accepted
+1682,HKUST-Rice,Asia,Hong Kong,Environment,Undergrad,46,Accepted
+1714,HokkaidoU_Japan,Asia,Japan,Health & Medicine,Undergrad,14,Accepted
+1648,Hong_Kong-CUHK,Asia,Hong Kong,New Application,Undergrad,24,Accepted
+1774,Hong_Kong_HKU,Asia,Hong Kong,New Application,Undergrad,17,Accepted
+1613,HSNU-TAIPEI,Asia,Taiwan,High School,High School,76,Accepted
+1592,HUST-China,Asia,China,Environment,Undergrad,22,Accepted
+1713,HZAU-China,Asia,China,Information Processing,Undergrad,25,Accepted
+1780,IISER_Pune,Asia,India,Health & Medicine,Undergrad,13,Accepted
+1866,IIT_Delhi,Asia,India,Environment,Overgrad,25,Accepted
+1862,IIT_Kharagpur,Asia,India,Food & Nutrition,Undergrad,19,Accepted
+1654,IIT_Madras,Asia,India,Health & Medicine,Undergrad,10,Accepted
+1616,IONIS_Paris,Europe,France,Information Processing,Undergrad,16,Accepted
+1685,ITB_INDONESIA,Asia,Indonesia,Manufacturing,Overgrad,26,Accepted
+1706,Jilin_China,Asia,China,Environment,Undergrad,43,Accepted
+1740,KAIT_Japan,Asia,Japan,Foundational Advance,Undergrad,13,Accepted
+1739,Kent,Europe,United Kingdom,New Application,Undergrad,17,Accepted
+1754,Korea_U_Seoul,Asia,Korea, Republic Of,Software,Undergrad,18,Accepted
+1709,KU_Leuven,Europe,Belgium,New Application,Overgrad,15,Accepted
+1662,Lambert_GA,North America,United States,High School,High School,14,Accepted
+1624,LASATX,North America,United States,High School,High School,17,Accepted
+1747,LaVerne-Leos,North America,United States,Energy,Undergrad,20,Accepted
+1715,Leicester,Europe,United Kingdom,Health & Medicine,Undergrad,11,Accepted
+1791,Lethbridge,North America,Canada,Food & Nutrition,Overgrad,17,Accepted
+1792,Lethbridge_HS,North America,Canada,High School,High School,16,Accepted
+1663,Liceo_Eugenio_Hostos,Latin America,Chile,High School,High School,5,Accepted
+1704,Linkoping_Sweden,Europe,Sweden,New Application,Overgrad,19,Accepted
+1845,London_Biohackspace,Europe,United Kingdom,Community Labs,Unspecified,11,Accepted
+1755,LZU-China,Asia,China,Measurement,Overgrad,34,Accepted
+1640,Macquarie_Australia,Asia,Australia,Energy,Overgrad,41,Accepted
+1670,Manchester-Graz,Europe,United Kingdom,Health & Medicine,Overgrad,22,Accepted
+1650,Marburg,Europe,Germany,Food & Nutrition,Overgrad,20,Accepted
+1658,METU_HS_Ankara,Europe,Turkey,High School,High School,11,Accepted
+1606,METU_Turkey,Europe,Turkey,Food & Nutrition,Undergrad,24,Accepted
+1843,Michigan,North America,United States,New Application,Overgrad,17,Accepted
+1785,Michigan_Software,North America,United States,Software,Overgrad,15,Accepted
+1608,Mingdao,Asia,Taiwan,High School,High School,34,Accepted
+1626,Minnesota,North America,United States,Foundational Advance,Undergrad,10,Accepted
+1805,Missouri_Columbia,North America,United States,Health & Medicine,Overgrad,11,Accepted
+1737,Missouri_Rolla,North America,United States,Environment,Undergrad,19,Accepted
+1705,MIT,North America,United States,Manufacturing,Undergrad,16,Accepted
+1653,Nagahama,Asia,Japan,Food & Nutrition,Undergrad,15,Accepted
+1787,NAIT_Edmonton,North America,Canada,New Application,Overgrad,8,Accepted
+1701,Nanjing-China,Asia,China,Environment,Undergrad,23,Accepted
+1643,Nanjing_NFLS,Asia,China,High School,High School,14,Accepted
+1628,Nankai,Asia,China,Health & Medicine,Undergrad,25,Accepted
+1694,NCTU_Formosa,Asia,Taiwan,Health & Medicine,Undergrad,28,Accepted
+1757,NEAU-China,Asia,China,New Application,Undergrad,23,Accepted
+1666,NEFU_China,Asia,China,Food & Nutrition,Undergrad,21,Accepted
+1649,NJAU_China,Asia,China,New Application,Undergrad,17,Accepted
+1633,NJU-China,Asia,China,Health & Medicine,Undergrad,26,Accepted
+1857,Northeastern_Boston,North America,United States,Manufacturing,Undergrad,15,Accepted
+1618,NRP-UEA-Norwich,Europe,United Kingdom,Food & Nutrition,Undergrad,12,Accepted
+1840,NTNU_Trondheim,Europe,Norway,Measurement,Overgrad,8,Accepted
+1841,NTU-LIHPAO-Taiwan,Asia,Taiwan,Health & Medicine,Undergrad,16,Accepted
+1676,NTU-Singapore,Asia,Singapore,Energy,Overgrad,14,Accepted
+1789,NUDT_CHINA,Asia,China,Manufacturing,Undergrad,17,Accepted
+1828,NU_Kazakhstan,Asia,Kazakhstan,Health & Medicine,Overgrad,9,Accepted
+1769,NYMU-Taipei,Asia,Taiwan,Environment,Overgrad,20,Accepted
+1867,NYU-AD,Asia,United Arab Emirates,Health & Medicine,Undergrad,10,Accepted
+1756,NYU_Shanghai,Asia,China,Art & Design,Undergrad,14,Accepted
+1717,OLS_Canmore_AB_CA,North America,Canada,High School,High School,10,Accepted
+1679,OUC-China,Asia,China,Measurement,Undergrad,17,Accepted
+1659,Oxford,Europe,United Kingdom,Health & Medicine,Undergrad,18,Accepted
+1710,PacificU-Oregon,North America,United States,New Application,Undergrad,3,Accepted
+1678,Paris_Bettencourt,Europe,France,Food & Nutrition,Overgrad,20,Accepted
+1707,Paris_Saclay,Europe,France,Environment,Overgrad,17,Accepted
+1622,Pasteur_Paris,Europe,France,Environment,Overgrad,27,Accepted
+1689,Peking,Asia,China,Health & Medicine,Undergrad,17,Accepted
+1815,Penn,North America,United States,Foundational Advance,Undergrad,5,Accepted
+1833,Pitt,North America,United States,Health & Medicine,Undergrad,7,Accepted
+1768,Pretoria_UP,Africa,South Africa,New Application,Undergrad,11,Accepted
+1772,Purdue,North America,United States,Energy,Undergrad,23,Accepted
+1831,Queens_Canada,North America,Canada,Health & Medicine,Undergrad,12,Accepted
+1708,Reading,Europe,United Kingdom,Energy,Overgrad,17,Accepted
+1729,RHIT,North America,United States,Manufacturing,Undergrad,6,Accepted
+1721,Rock_Ridge_Virginia,North America,United States,High School,High School,19,Accepted
+1869,Santa_Clara,North America,United States,Manufacturing,Overgrad,7,Accepted
+1665,San_Andres,Latin America,Chile,High School,High School,8,Accepted
+1724,SCUT,Asia,China,Environment,Undergrad,37,Accepted
+1778,Scut-Champion-Park,Asia,China,Food & Nutrition,Overgrad,22,Accepted
+1720,SCUT-China,Asia,China,Health & Medicine,Undergrad,25,Accepted
+1796,SCU_China,Asia,China,Environment,Undergrad,20,Accepted
+1672,SDA-Encinitas,North America,United States,High School,High School,15,Accepted
+1638,SDU-Denmark,Europe,Denmark,Manufacturing,Overgrad,14,Accepted
+1839,SF_Bay_Area_DIYBio,North America,United States,Community Labs,Overgrad,37,Accepted
+1607,Shenzhen_SFLS,Asia,China,High School,High School,21,Accepted
+1744,Sherbrooke,North America,Canada,Hardware,Overgrad,19,Accepted
+1667,Shiyan_SY_China,Asia,China,High School,High School,13,Accepted
+1642,SJTU-BioX-Shanghai,Asia,China,Food & Nutrition,Undergrad,21,Accepted
+1759,SJTU-Software,Asia,China,Software,Undergrad,17,Accepted
+1793,SKLBC-China,Asia,China,High School,High School,12,Accepted
+1794,SKLBC-DGSYZX,Asia,China,High School,High School,15,Accepted
+1669,Slovenia_HS,Europe,Slovenia,High School,High School,12,Accepted
+1804,SPSingapore,Asia,Singapore,Health & Medicine,Undergrad,13,Accepted
+1692,Stanford-Brown,North America,United States,Manufacturing,Undergrad,21,Accepted
+1766,Stockholm,Europe,Sweden,Health & Medicine,Overgrad,24,Accepted
+1810,Stony_Brook,North America,United States,Health & Medicine,Undergrad,22,Accepted
+1814,SVA-NYC,North America,United States,Art & Design,Overgrad,14,Accepted
+1826,SVCE_Chennai,Asia,India,Health & Medicine,Overgrad,22,Accepted
+1736,Sydney_Australia,Asia,Australia,Manufacturing,Undergrad,7,Accepted
+1591,SYSU-Software,Asia,China,Software,Undergrad,31,Accepted
+1641,SYSU_CHINA,Asia,China,New Application,Undergrad,20,Accepted
+1687,SZMS_15_Shenzhen,Asia,China,High School,High School,16,Accepted
+1722,SZU_China,Asia,China,Health & Medicine,Undergrad,23,Accepted
+1610,TAS_Taipei,Asia,Taiwan,High School,High School,20,Accepted
+1727,TCU_Taiwan,Asia,Taiwan,Health & Medicine,Undergrad,35,Accepted
+1852,Tec-Chihuahua,Latin America,Mexico,Foundational Advance,Undergrad,11,Accepted
+1734,Tec-Monterrey,Latin America,Mexico,New Application,Undergrad,29,Accepted
+1636,TecCEM,Latin America,Mexico,New Application,Undergrad,20,Accepted
+1629,TecCEM_HS,Latin America,Mexico,High School,High School,16,Accepted
+1767,Technion_HS_Israel,Asia,Israel,High School,High School,18,Accepted
+1674,Technion_Israel,Europe,Israel,New Application,Overgrad,15,Accepted
+1801,Tec_Guadalajara,Latin America,Mexico,Manufacturing,Undergrad,15,Accepted
+1582,Tianjin,Asia,China,New Application,Undergrad,24,Accepted
+1696,TJU,Asia,China,Energy,Undergrad,23,Accepted
+1765,Tokyo-NoKoGen,Asia,Japan,Environment,Undergrad,17,Accepted
+1632,Tokyo_Tech,Asia,Japan,Information Processing,Undergrad,18,Accepted
+1760,Toronto,North America,Canada,Software,Overgrad,40,Accepted
+1587,Toulouse,Europe,France,Environment,Undergrad,18,Accepted
+1788,TP_CC-SanDiego,North America,United States,High School,High School,23,Accepted
+1808,TrinityCollegeDublin,Europe,Ireland,Health & Medicine,Undergrad,10,Accepted
+1797,Tsinghua,Asia,China,Hardware,Undergrad,14,Accepted
+1700,Tsinghua-A,Asia,China,Health & Medicine,Undergrad,12,Accepted
+1680,Tuebingen,Europe,Germany,Foundational Advance,Overgrad,22,Accepted
+1818,Tufts,North America,United States,Health & Medicine,Undergrad,18,Accepted
+1602,TU_Darmstadt,Europe,Germany,Hardware,Overgrad,45,Accepted
+1583,TU_Delft,Europe,Netherlands,Hardware,Overgrad,15,Accepted
+1781,TU_Dresden,Europe,Germany,Health & Medicine,Overgrad,14,Accepted
+1761,TU_Eindhoven,Europe,Netherlands,New Application,Undergrad,13,Accepted
+1832,UAI-Chile,Latin America,Chile,Environment,Overgrad,15,Accepted
+1741,UAM_Poznan,Europe,Poland,Manufacturing,Undergrad,11,Accepted
+1823,UB_Indonesia,Asia,Indonesia,Health & Medicine,Undergrad,19,Accepted
+1745,UChicago,North America,United States,New Application,Undergrad,14,Accepted
+1730,UChile-OpenBio,Latin America,Chile,Environment,Overgrad,14,Accepted
+1598,UCL,Europe,United Kingdom,Health & Medicine,Overgrad,22,Accepted
+1763,UCLA,North America,United States,Manufacturing,Undergrad,17,Accepted
+1775,UCSC,North America,United States,Energy,Overgrad,28,Accepted
+1829,UCSF,North America,United States,Information Processing,Undergrad,14,Accepted
+1712,UC_Davis,North America,United States,Environment,Overgrad,9,Accepted
+1842,UC_San_Diego,North America,United States,Measurement,Undergrad,10,Accepted
+1782,UESTC_Software,Asia,China,Software,Undergrad,17,Accepted
+1776,UFMG_Brazil,Latin America,Brazil,Health & Medicine,Overgrad,19,Accepted
+1620,UFSCar-Brasil,Latin America,Brazil,Manufacturing,Overgrad,17,Accepted
+1635,UGA-Georgia,North America,United States,Measurement,Overgrad,18,Accepted
+1619,UiOslo_Norway,Europe,Norway,Environment,Overgrad,11,Accepted
+1681,UIUC_Illinois,North America,United States,Information Processing,Undergrad,19,Accepted
+1697,UI_Indonesia,Asia,Indonesia,Health & Medicine,Undergrad,25,Accepted
+1783,UMaryland,North America,United States,New Application,Undergrad,22,Accepted
+1644,UMass-Dartmouth,North America,United States,Health & Medicine,Overgrad,10,Accepted
+1811,UMBC-Maryland,North America,United States,Environment,Overgrad,15,Accepted
+1731,UNAM-CU,Latin America,Mexico,Health & Medicine,Undergrad,15,Accepted
+1588,UNA_Honduras,Latin America,Honduras,Health & Medicine,Overgrad,18,Accepted
+1838,UNC-Chapel_Hill,North America,United States,Foundational Advance,Undergrad,10,Accepted
+1786,Uniandes_Colombia,Latin America,Colombia,Information Processing,Undergrad,14,Accepted
+1825,UNIK_Copenhagen,Europe,Denmark,Environment,Overgrad,13,Accepted
+1604,UNITN-Trento,Europe,Italy,Energy,Undergrad,12,Accepted
+1652,uOttawa,North America,Canada,Health & Medicine,Undergrad,7,Accepted
+1688,Uppsala,Europe,Sweden,Environment,Overgrad,25,Accepted
+1593,USTC,Asia,China,Hardware,Undergrad,20,Accepted
+1594,USTC-Software,Asia,China,Software,Undergrad,25,Accepted
+1631,UT-Tokyo,Asia,Japan,Information Processing,Undergrad,14,Accepted
+1820,Utah_State,North America,United States,Manufacturing,Overgrad,11,Accepted
+1742,Valencia_UPV,Europe,Spain,Information Processing,Undergrad,20,Accepted
+1673,Vanderbilt,North America,United States,Foundational Advance,Undergrad,9,Accepted
+1773,Vilnius-Lithuania,Europe,Lithuania,Foundational Advance,Undergrad,9,Accepted
+1600,Virginia,North America,United States,Health & Medicine,Undergrad,12,Accepted
+1855,Warwick,Europe,United Kingdom,Foundational Advance,Undergrad,14,Accepted
+1711,Washington,North America,United States,New Application,Overgrad,19,Accepted
+1605,WashU_StLouis,North America,United States,Food & Nutrition,Undergrad,14,Accepted
+1645,Waterloo,North America,Canada,Foundational Advance,Overgrad,41,Accepted
+1735,Wellesley_TheTech,North America,United States,Community Labs,Undergrad,15,Accepted
+1748,Westminster,Europe,United Kingdom,Energy,Overgrad,19,Accepted
+1647,WHU-China,Asia,China,Information Processing,Undergrad,29,Accepted
+1753,WHU-Pharm,Asia,China,Health & Medicine,Undergrad,5,Accepted
+1795,William_and_Mary,North America,United States,Measurement,Undergrad,9,Accepted
+1683,WLC-Milwaukee,North America,United States,Health & Medicine,Undergrad,13,Accepted
+1803,WLSA_Shanghai,Asia,China,High School,High School,9,Accepted
+1809,WPI-Worcester,North America,United States,New Application,Undergrad,8,Accepted
+1824,XJTLU-CHINA,Asia,China,Information Processing,Undergrad,21,Accepted
+1856,Yale,North America,United States,Foundational Advance,Undergrad,20,Accepted
+1807,York,Europe,United Kingdom,Environment,Undergrad,20,Accepted
+1668,ZJU-China,Asia,China,Environment,Undergrad,20,Accepted
