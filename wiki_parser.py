@@ -47,6 +47,8 @@ class TeamPage(HTMLParser):
         self.start_pi = False
         self.start_2pi = False
         self.start_inst = False
+        self.start_leader = False
+        self.start_advisor = False
         self.record = False
         self.id = 0
         self.tmp = []
@@ -56,8 +58,8 @@ class TeamPage(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         # if self.start:
-        # print "Encountered a start tag:", tag
-        # print attrs
+        print "Encountered a start tag:", tag
+        print attrs
 
         if tag == 'table':
             if 'id' in attrs:
@@ -77,14 +79,35 @@ class TeamPage(HTMLParser):
             self.record = True
 
         if tag == 'a' and self.start_pi:
+            print "start pi Rec true"
             self.record = True
 
         if tag == 'a' and self.start_inst:
+            print "start inst Rec true"
             self.record = True
 
-        if tag == 'tr' and self.start_2pi:
+        if tag == 'a' and self.start_leader:
             self.record = True
             self.tmp = []
+            self.tmp2 = []
+            self.i = 0
+
+        if self.start_pi and self.record and tag == 'tr':
+            print "Stop PI"
+            self.start_pi = False
+            self.record = False
+        if self.start_2pi and self.record and tag == 'tr':
+            print "Stop PI2"
+            self.start_2pi = False
+            self.record = False
+
+        if tag == 'tr' and self.start_2pi:
+            print "start pi 2 Rec true"
+            self.record = True
+            self.tmp = []
+            self.tmp2 = []
+            self.i = 0
+
 
     def handle_endtag(self, tag):
         print "Encountered an end tag :", tag
@@ -94,10 +117,16 @@ class TeamPage(HTMLParser):
             self.start2 = False
             # self.res.append(self.tmp)
             # print 'res', self.res
-        if self.start_pi or self.start_2pi and self.record and tag == 'tr':
-            self.start_pi = False
-            self.start_2pi = False
+
+        if self.start_end and tag == "table":
+            self.start_end = False
             self.record = False
+            self.res.append(";".join(self.tmp))
+            self.res.append(";".join(self.tmp2))
+        if self.start_advisor and tag == "table":
+            self.start_advisor = False
+            self.res.append(";".join(self.tmp))
+            self.res.append(";".join(self.tmp2))
 
     def handle_data(self, data):
         print "Encountered some data  :", data
@@ -110,27 +139,97 @@ class TeamPage(HTMLParser):
         if self.start2 and self.record:
             self.res.append(data.strip())
             self.record = False
-        if "Secondary PI" in data:
-            self.start_2pi = True
-        if "Primary PI" in data:
-            self.start_pi = True
-        if "Instructors" in data:
-            self.start_inst = True
-        if "Student Leaders" in data:
-            self.start_inst = False
-            self.res.append(";".join(self.tmp))
-        if "Student Members" in data:
-            self.start_end = True
+
         if self.start_2pi and self.record:
-            if data == 'None designated':
+            if 'None designated' in data:
                 self.res.append("None")
                 self.res.append("None")
+            elif 'Required' in data:
+                pass
             else:
                 self.res.append(data)
         if self.start_pi and self.record:
-            self.res.append(data)
+            if data.strip():
+                self.res.append(data)
         if self.start_inst and self.record:
-            self.tmp.append(data)
+            if data.strip() and "Student Leaders" not in data:
+                if self.i == 0:
+                    self.tmp.append(data)
+                    self.i = 1
+                elif self.i == 1:
+                    self.tmp2.append(data)
+                    self.i = 0
+            print self.tmp, self.tmp2
+        if self.start_leader:
+            if "None designated" in data:
+                self.res.append('None')
+                self.res.append('None')
+                self.start_leader = False
+        if self.start_leader and self.record:
+            if data.strip():
+                if self.i == 0:
+                    self.tmp.append(data)
+                    self.i = 1
+                elif self.i == 1:
+                    self.tmp2.append(data)
+                    self.i = 0
+        if self.start_end:
+            if "None designated" in data:
+                self.res.append('None')
+                self.res.append('None')
+            elif data.strip():
+                if self.i == 0:
+                    self.tmp.append(data)
+                    self.i = 1
+                elif self.i == 1:
+                    self.tmp2.append(data)
+                    self.i = 0
+        if self.start_advisor:
+            if "None designated" in data:
+                self.res.append('None')
+                self.res.append('None')
+            elif data.strip():
+                if self.i == 0:
+                    self.tmp.append(data)
+                    self.i = 1
+                elif self.i == 1:
+                    self.tmp2.append(data)
+                    self.i = 0
+        if "Secondary PI" in data:
+            self.start_2pi = True
+            print "start PI2"
+        if "Primary PI" in data:
+            self.start_pi = True
+            print "start PI"
+        if "Instructors" in data:
+            self.start_inst = True
+            print "start Instructors"
+        if "Student Leaders" in data:
+            print "start Leaders"
+            self.start_inst = False
+            self.record = False
+            self.start_leader = True
+            self.res.append(";".join(self.tmp))
+            self.res.append(";".join(self.tmp2))
+            self.tmp = []
+            self.tmp2 = []
+        if "Student Members" in data:
+            print "start Members"
+            if self.start_leader:
+                self.start_leader = False
+                self.res.append(";".join(self.tmp))
+                self.res.append(";".join(self.tmp2))
+            self.record = False
+            self.tmp = []
+            self.tmp2 = []
+            self.i = 0
+            self.start_end = True
+        if "Advisors" in data:
+            print "start Advisors"
+            self.start_advisor = True
+            self.tmp = []
+            self.tmp2 = []
+
 
 
 class UserContribution(HTMLParser):
