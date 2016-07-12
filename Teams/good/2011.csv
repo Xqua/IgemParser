@@ -1,0 +1,148 @@
+Team ID , Team  , Region , Country , Track , Section , Size , Status
+612,Alberta,North America,Canada,Food & Energy,IGEM,10,Accepted
+538,Amsterdam,Europe,Netherlands,Foundational Advance,IGEM,12,Accepted
+578,Arizona_State,North America,United States,New Application,IGEM,11,Accepted
+645,ArtScienceBangalore,Asia,India,Environment,IGEM,14,Accepted
+665,Baltimore,North America,United States,New Application,IGEM,11,Accepted
+595,Bard-Annandale,North America,United States,Information Processing,IGEM,4,Accepted
+641,Berkeley,North America,United States,New Application,IGEM,10,Accepted
+525,Bielefeld-Germany,Europe,Germany,Manufacturing,IGEM,18,Accepted
+596,Bilkent_UNAM_Turkey,Europe,Turkey,Environment,IGEM,8,Accepted
+517,British_Columbia,North America,Canada,Manufacturing,IGEM,12,Accepted
+656,Brown-Stanford,North America,United States,New Application,IGEM,12,Accepted
+577,BU_Wellesley_Software,North America,United States,Software Tools,IGEM,25,Accepted
+619,BYU_Provo,North America,United States,Information Processing,IGEM,12,Accepted
+640,Calgary,North America,Canada,Environment,IGEM,17,Accepted
+620,Caltech,North America,United States,Environment,IGEM,9,Accepted
+638,Cambridge,Europe,United Kingdom,Foundational Advance,IGEM,20,Accepted
+605,CBNU-Korea,Asia,Republic Of Korea,Software Tools,IGEM,9,Accepted
+669,Colombia,Latin America,Colombia,Environment,IGEM,23,Accepted
+643,Columbia-Cooper,North America,United States,Manufacturing,IGEM,20,Accepted
+527,Copenhagen,Europe,Denmark,Manufacturing,IGEM,10,Accepted
+597,Cornell,North America,United States,Manufacturing,IGEM,17,Accepted
+626,Debrecen_Hungary,Europe,Hungary,Food & Energy,IGEM,13,Accepted
+564,DTU-Denmark,Europe,Denmark,Foundational Advance,IGEM,10,Accepted
+678,DTU-Denmark-2,Europe,Denmark,Foundational Advance,IGEM,8,Accepted
+655,Duke,North America,United States,New Application,IGEM,11,Accepted
+562,Dundee,Europe,United Kingdom,Foundational Advance,IGEM,15,Accepted
+523,Edinburgh,Europe,United Kingdom,Food & Energy,IGEM,18,Accepted
+522,ENSPS-Strasbourg,Europe,France,Software Tools,IGEM,10,Accepted
+613,EPF-Lausanne,Europe,Switzerland,Foundational Advance,IGEM,12,Accepted
+625,ETH_Zurich,Europe,Switzerland,Information Processing,IGEM,9,Accepted
+541,Fatih_Turkey,Europe,Turkey,New Application,IGEM,18,Accepted
+608,Freiburg,Europe,Germany,Foundational Advance,IGEM,12,Accepted
+604,Fudan-Shanghai,Asia,China,New Application,IGEM,20,Accepted
+614,Gaston_Day_School,North America,United States,Environment,IGEM,6,Accepted
+529,GeorgiaState,North America,United States,Manufacturing,IGEM,7,Accepted
+582,GeorgiaTech,North America,United States,New Application,IGEM,11,Accepted
+660,Glasgow,Europe,United Kingdom,Manufacturing,IGEM,14,Accepted
+586,Greenfield_IN-Rihm-HS,North America,United States,,High School,7,Accepted
+637,Greenfield_IN-Schini-HS,North America,United States,,High School,2,Accepted
+545,Grenoble,Europe,France,Environment,IGEM,18,Accepted
+531,Grinnell,North America,United States,Manufacturing,IGEM,4,Accepted
+607,Groningen,Europe,Netherlands,Information Processing,Pg_masters,16,Accepted
+615,Harvard,North America,United States,Foundational Advance,IGEM,20,Accepted
+609,HIT-Harbin,Asia,China,Food & Energy,IGEM,14,Accepted
+544,HKU-Hong_Kong,Asia,Hong Kong,New Application,IGEM,19,Accepted
+524,HKUST-Hong_Kong,Asia,Hong Kong,New Application,IGEM,42,Accepted
+547,HokkaidoU_Japan,Asia,Japan,New Application,IGEM,24,Accepted
+559,Hong_Kong-CUHK,Asia,Hong Kong,Foundational Advance,IGEM,31,Accepted
+661,Hunter-NYC,North America,United States,Environment,IGEM,7,Accepted
+580,HUST-China,Asia,China,Software Tools,IGEM,20,Accepted
+572,IIT_Madras,Asia,India,New Application,IGEM,16,Accepted
+515,Imperial_College_London,Europe,United Kingdom,Environment,IGEM,17,Accepted
+587,ITESM_Mexico,Latin America,Mexico,Environment,IGEM,16,Accepted
+530,Johns_Hopkins,North America,United States,Food & Energy,IGEM,22,Accepted
+623,KAIST-Korea,Asia,Republic Of Korea,New Application,IGEM,13,Accepted
+647,KAIT_Japan,Asia,Japan,Foundational Advance,IGEM,7,Accepted
+579,KIT-Kyoto,Asia,Japan,Health & Medicine,IGEM,17,Accepted
+610,Korea_U_Seoul,Asia,Republic Of Korea,Food & Energy,IGEM,25,Accepted
+584,KULeuven,Europe,Belgium,Environment,IGEM,25,Accepted
+622,Kyoto,Asia,Japan,New Application,IGEM,22,Accepted
+542,Lethbridge,North America,Canada,Environment,IGEM,23,Accepted
+549,LMU-Munich,Europe,Germany,Environment,IGEM,12,Accepted
+540,Lyon-INSA-ENS,Europe,France,Environment,IGEM,27,Accepted
+646,Macquarie_Australia,Asia,Australia,New Application,IGEM,19,Accepted
+593,METU-Ankara,Europe,Turkey,Environment,Pg_masters,19,Accepted
+536,METU-BIN_Ankara,Europe,Turkey,Software Tools,IGEM,11,Accepted
+618,Michigan,North America,United States,New Application,IGEM,19,Accepted
+632,Minnesota,North America,United States,Manufacturing,IGEM,23,Accepted
+621,Missouri_Miners,North America,United States,Health & Medicine,IGEM,28,Accepted
+511,MIT,North America,United States,Health & Medicine,IGEM,21,Accepted
+539,NCTU_Formosa,Asia,Taiwan,New Application,IGEM,23,Accepted
+558,Nevada,North America,United States,Food & Energy,IGEM,25,Accepted
+575,Northwestern,North America,United States,Health & Medicine,IGEM,10,Accepted
+639,NTNU_Trondheim,Europe,Norway,New Application,IGEM,14,Accepted
+651,NYC_Software,North America,United States,Software Tools,IGEM,9,Accepted
+650,NYC_Wetware,North America,United States,Environment,IGEM,9,Accepted
+624,NYMU-Taipei,Asia,Taiwan,New Application,IGEM,30,Accepted
+602,Osaka,Asia,Japan,Environment,IGEM,9,Accepted
+594,OUC-China,Asia,China,Information Processing,IGEM,14,Accepted
+653,Panama,Latin America,Panama,Environment,IGEM,21,Accepted
+606,Paris_Bettencourt,Europe,France,Foundational Advance,IGEM,21,Accepted
+598,Peking_R,Asia,China,New Application,IGEM,13,Accepted
+581,Peking_S,Asia,China,Information Processing,IGEM,15,Accepted
+548,Penn,North America,United States,Foundational Advance,IGEM,17,Accepted
+648,Penn_State,North America,United States,Environment,IGEM,13,Accepted
+627,Potsdam_Bioware,Europe,Germany,Health & Medicine,IGEM,20,Accepted
+631,Queens_Canada,North America,Canada,Environment,IGEM,21,Accepted
+588,Rutgers,North America,United States,Information Processing,IGEM,18,Accepted
+514,Sevilla,Europe,Spain,Foundational Advance,IGEM,14,Accepted
+567,SJTU-BioX-Shanghai,Asia,China,New Application,IGEM,13,Accepted
+663,SouthBend-Mishawaka-HS,North America,United States,,High School,9,Accepted
+675,SouthBend-Mishawaka-HS-2,North America,United States,,High School,8,Accepted
+628,St_Andrews,Europe,United Kingdom,Health & Medicine,IGEM,11,Accepted
+629,SYSU-China,Asia,China,Environment,IGEM,16,Accepted
+633,Tec-Monterrey,Latin America,Mexico,Food & Energy,IGEM,13,Accepted
+563,Tianjin,Asia,China,Food & Energy,IGEM,15,Accepted
+519,Tokyo-NoKoGen,Asia,Japan,Environment,IGEM,15,Accepted
+543,Tokyo_Metropolitan,Asia,Japan,Health & Medicine,IGEM,34,Accepted
+649,Tokyo_Tech,Asia,Japan,New Application,IGEM,23,Accepted
+601,Toronto,North America,Canada,New Application,IGEM,12,Accepted
+533,Tsinghua,Asia,China,Information Processing,IGEM,14,Accepted
+574,Tsinghua-A,Asia,China,Foundational Advance,IGEM,15,Accepted
+556,TU-Delft,Europe,Netherlands,New Application,IGEM,15,Accepted
+568,TU_Munich,Europe,Germany,Manufacturing,IGEM,22,Accepted
+571,TzuChiU_Formosa,Asia,Taiwan,Manufacturing,IGEM,25,Accepted
+566,UANL_Mty-Mexico,Latin America,Mexico,Information Processing,IGEM,19,Accepted
+676,UCL_London,Europe,United Kingdom,Manufacturing,IGEM,16,Accepted
+644,UCSF,North America,United States,Health & Medicine,IGEM,12,Accepted
+611,UC_Davis,North America,United States,Foundational Advance,IGEM,5,Accepted
+509,UEA-JIC_Norwich,Europe,United Kingdom,New Application,IGEM,15,Accepted
+617,UIUC-Illinois,North America,United States,New Application,IGEM,13,Accepted
+551,ULB-Brussels,Europe,Belgium,Foundational Advance,IGEM,19,Accepted
+535,UNAM-Genomics_Mexico,Latin America,Mexico,Food & Energy,IGEM,24,Accepted
+554,UNICAMP-EMSE_Brazil,Latin America,Brazil,Health & Medicine,IGEM,15,Accepted
+516,UNIPV-Pavia,Europe,Italy,Information Processing,IGEM,13,Accepted
+526,UNIST_Korea,Asia,Republic Of Korea,Environment,IGEM,11,Accepted
+553,UNITS_Trieste,Europe,Italy,New Application,IGEM,12,Accepted
+642,uOttawa,North America,Canada,Foundational Advance,IGEM,17,Accepted
+510,UPO-Sevilla,Europe,Spain,New Application,IGEM,17,Accepted
+592,Uppsala-Sweden,Europe,Sweden,New Application,IGEM,23,Accepted
+570,UQ-Australia,Asia,Australia,Foundational Advance,IGEM,9,Accepted
+512,USC,North America,United States,Foundational Advance,IGEM,8,Accepted
+603,UST-Beijing,Asia,China,Food & Energy,IGEM,8,Accepted
+557,USTC-China,Asia,China,Foundational Advance,IGEM,21,Accepted
+507,USTC-Software,Asia,China,Software Tools,IGEM,17,Accepted
+518,UT-Tokyo,Asia,Japan,Manufacturing,IGEM,23,Accepted
+654,Utah_State,North America,United States,Manufacturing,IGEM,11,Accepted
+672,UTP-Panama,Latin America,Panama,Food & Energy,IGEM,20,Accepted
+569,UT_Dallas,North America,United States,Health & Medicine,IGEM,13,Accepted
+565,Valencia,Europe,Spain,Environment,IGEM,19,Accepted
+674,VCU,North America,United States,Foundational Advance,IGEM,6,Accepted
+635,Virginia,North America,United States,Health & Medicine,IGEM,7,Accepted
+555,Virginia_Tech,North America,United States,Foundational Advance,IGEM,15,Accepted
+513,VIT_Vellore,Asia,India,Health & Medicine,IGEM,8,Accepted
+546,Wageningen_UR,Europe,Netherlands,Foundational Advance,IGEM,19,Accepted
+659,WarrenCIndpls_IN-HS,North America,United States,,High School,1,Accepted
+528,Warsaw,Europe,Poland,Foundational Advance,IGEM,12,Accepted
+590,Washington,North America,United States,Food & Energy,IGEM,30,Accepted
+552,WashU,North America,United States,Food & Energy,IGEM,12,Accepted
+576,Waterloo,North America,Canada,Foundational Advance,IGEM,28,Accepted
+583,West_Point,North America,United States,Health & Medicine,IGEM,7,Accepted
+560,WHU-China,Asia,China,Foundational Advance,IGEM,22,Accepted
+634,Wisconsin-Madison,North America,United States,Environment,IGEM,10,Accepted
+537,WITS-CSIR_SA,Europe,South Africa,New Application,IGEM,11,Accepted
+658,XMU-China,Asia,China,Manufacturing,IGEM,13,Accepted
+652,Yale,North America,United States,Food & Energy,IGEM,12,Accepted
+561,ZJU-China,Asia,China,New Application,IGEM,14,Accepted

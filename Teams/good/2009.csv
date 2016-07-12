@@ -1,0 +1,105 @@
+Team ID , Team  , Region , Country , Track , Section , Size , Status
+182,Aberdeen_Scotland,Europe,United Kingdom,New Application,IGEM,21,Accepted
+187,Alberta,North America,Canada,Foundational Advance,IGEM,30,Accepted
+221,ArtScienceBangalore,Asia,India,New Application,IGEM,12,Accepted
+259,BCCS-Bristol,Europe,United Kingdom,Foundational Advance,IGEM,16,Accepted
+198,Berkeley_Software,North America,United States,Software Tools,IGEM,9,Accepted
+197,Berkeley_Wetlab,North America,United States,Foundational Advance,IGEM,13,Accepted
+260,BIOTEC_Dresden,Europe,Germany,Manufacturing,IGEM,14,Accepted
+201,Bologna,Europe,Italy,Foundational Advance,IGEM,15,Accepted
+206,British_Columbia,North America,Canada,Foundational Advance,IGEM,14,Accepted
+212,Brown,North America,United States,Health/Medicine,IGEM,12,Accepted
+218,Calgary,North America,Canada,Foundational Advance,IGEM,16,Accepted
+274,Cambridge,Europe,United Kingdom,Environment,IGEM,12,Accepted
+236,CBNU-Korea,Asia,Republic Of Korea,Software Tools,IGEM,14,Accepted
+247,Chiba,Asia,Japan,Manufacturing,IGEM,10,Accepted
+226,CityColSanFrancisco,North America,United States,Food/Energy,IGEM,15,Accepted
+285,Cornell,North America,United States,Environment,IGEM,9,Accepted
+194,DTU_Denmark,Europe,Denmark,Manufacturing,IGEM,10,Accepted
+282,Duke,North America,United States,Manufacturing,IGEM,10,Accepted
+216,Edinburgh,Europe,United Kingdom,Environment,IGEM,10,Accepted
+191,EPF-Lausanne,Europe,Switzerland,Foundational Advance,IGEM,15,Accepted
+243,Freiburg_bioware,Europe,Germany,Foundational Advance,IGEM,21,Accepted
+279,Freiburg_software,Europe,United States,Software Tools,IGEM,7,Accepted
+230,Gaston_Day_School,North America,United States,Environment,IGEM,10,Accepted
+190,Groningen,Europe,Netherlands,Environment,IGEM,12,Accepted
+207,Harvard,North America,United States,New Application,IGEM,13,Accepted
+203,Heidelberg,Europe,Germany,Foundational Advance,IGEM,22,Accepted
+283,HKU-HKBU,Asia,Hong Kong,Manufacturing,IGEM,25,Accepted
+211,HKUST,Asia,Hong Kong,New Application,IGEM,20,Accepted
+233,IBB_Pune,Asia,India,Information Processing,IGEM,9,Accepted
+255,IIT_Bombay_India,Asia,India,Foundational Advance,IGEM,15,Accepted
+272,IIT_Madras,Asia,India,New Application,IGEM,12,Accepted
+252,Illinois,North America,United States,Information Processing,IGEM,14,Accepted
+261,Illinois-Tools,North America,United States,Software Tools,IGEM,9,Accepted
+200,Imperial College London,Europe,United Kingdom,Manufacturing,IGEM,16,Accepted
+266,IPN-UNAM-Mexico,Latin America,Mexico,Foundational Advance,IGEM,18,Accepted
+287,IPOC1-Colombia,Latin America,Colombia,Environment,IGEM,15,Accepted
+288,IPOC2-Colombia,Latin America,Colombia,Environment,IGEM,16,Accepted
+277,Johns_Hopkins-BAG,North America,United States,New Application,IGEM,9,Accepted
+238,KULeuven,Europe,Belgium,Manufacturing,IGEM,31,Accepted
+271,KU_Seoul,Asia,Republic Of Korea,Environment,IGEM,14,Accepted
+210,Kyoto,Asia,Japan,Foundational Advance,IGEM,16,Accepted
+242,LCG-UNAM-Mexico,Latin America,Mexico,New Application,IGEM,15,Accepted
+249,Lethbridge,North America,Canada,Foundational Advance,IGEM,13,Accepted
+290,McGill,North America,Canada,New Application,IGEM,6,Accepted
+258,METU-Gene,Europe,Turkey,Health/Medicine,IGEM,19,Accepted
+270,Michigan,North America,United States,Environment,IGEM,15,Accepted
+202,Minnesota,North America,United States,Software Tools,IGEM,11,Accepted
+269,Missouri_Miners,North America,United States,Food/Energy,IGEM,17,Accepted
+181,MIT,North America,United States,Foundational Advance,IGEM,16,Accepted
+199,MoWestern_Davidson,North America,United States,Information Processing,IGEM,21,Accepted
+188,NCTU_Formosa,Asia,Taiwan,New Application,IGEM,21,Accepted
+262,Nevada,North America,United States,Health/Medicine,IGEM,15,Accepted
+174,Newcastle,Europe,United Kingdom,Environment,IGEM,13,Accepted
+256,NTU-Singapore,Asia,Singapore,Health/Medicine,IGEM,14,Accepted
+195,NYMU-Taipei,Asia,Taiwan,Health/Medicine,IGEM,20,Accepted
+276,NYU,North America,United States,,IGEM,6,Dropped
+204,Osaka,Asia,Japan,New Application,IGEM,18,Accepted
+257,Paris,Europe,France,Foundational Advance,IGEM,22,Accepted
+228,PKU_Beijing,Asia,China,Information Processing,IGEM,14,Accepted
+217,Purdue,North America,United States,Health/Medicine,IGEM,16,Accepted
+214,Queens,North America,Canada,Health/Medicine,IGEM,16,Accepted
+237,SDU-Denmark,Europe,Denmark,Health/Medicine,IGEM,14,Accepted
+246,Sheffield,Europe,United Kingdom,Foundational Advance,IGEM,8,Accepted
+185,SJTU-BioX-Shanghai,Asia,China,Information Processing,IGEM,21,Accepted
+245,Slovenia,Europe,Slovenia,Manufacturing,IGEM,18,Accepted
+180,Southampton,Europe,United Kingdom,Information Processing,IGEM,14,Accepted
+223,Stanford,North America,United States,Health/Medicine,IGEM,29,Accepted
+292,SupBiotech-Paris,Europe,France,Health/Medicine,IGEM,14,Accepted
+240,Sweden,Europe,Sweden,Information Processing,IGEM,10,Accepted
+289,Tianjin,Asia,China,Environment,IGEM,12,Accepted
+179,Todai-Tokyo,Asia,Japan,Health/Medicine,IGEM,20,Accepted
+225,Tokyo-Nokogen,Asia,Japan,Manufacturing,IGEM,15,Accepted
+193,Tokyo_Tech,Asia,Japan,Environment,IGEM,20,Accepted
+192,TorontoMaRSDiscovery,North America,Canada,New Application,IGEM,12,Accepted
+189,Tsinghua,Asia,China,Health/Medicine,IGEM,24,Accepted
+175,TUDelft,Europe,Netherlands,Information Processing,IGEM,10,Accepted
+291,TU_Munich,Europe,Germany,,IGEM,7,Dropped
+229,TzuChiU_Formosa,Asia,Taiwan,Food/Energy,IGEM,59,Accepted
+248,UAB-Barcelona,Europe,Spain,Environment,IGEM,11,Accepted
+268,UChicago,North America,United States,Environment,IGEM,8,Accepted
+239,UCL_London,Europe,United States,Foundational Advance,IGEM,8,Accepted
+209,UCSF,North America,United States,Health/Medicine,IGEM,20,Accepted
+265,UC_Davis,North America,United States,New Application,IGEM,7,Accepted
+196,ULB-Brussels,Europe,Belgium,Manufacturing,IGEM,12,Accepted
+284,UNICAMP-Brazil,Latin America,Brazil,Food/Energy,IGEM,18,Accepted
+173,UNIPV-Pavia,Europe,Italy,Food/Energy,IGEM,15,Accepted
+234,uOttawa,North America,Canada,Health/Medicine,IGEM,16,Accepted
+273,Uppsala-Sweden,Europe,Sweden,Food/Energy,IGEM,8,Accepted
+205,UQ-Australia,Asia,Australia,Environment,IGEM,13,Accepted
+176,USTC,Asia,China,Foundational Advance,IGEM,16,Accepted
+183,USTC_Software,Asia,China,Software Tools,IGEM,9,Accepted
+208,Utah_State,North America,United States,Manufacturing,IGEM,19,Accepted
+222,Valencia,Europe,Spain,New Application,IGEM,19,Accepted
+235,VictoriaBC,North America,Canada,Manufacturing,IGEM,8,Accepted
+254,Victoria_Australia,Asia,Australia,Manufacturing,IGEM,13,Accepted
+231,Virginia,North America,United States,Environment,IGEM,7,Accepted
+264,Virginia_Commonwealth,North America,United States,Foundational Advance,IGEM,12,Accepted
+177,Warsaw,Europe,Poland,Health/Medicine,IGEM,18,Accepted
+215,Washington,North America,United States,Manufacturing,IGEM,11,Accepted
+253,Washington-Software,North America,United States,Software Tools,IGEM,8,Accepted
+227,Wash_U,North America,United States,Food/Energy,IGEM,16,Accepted
+241,Waterloo,North America,Canada,Foundational Advance,IGEM,26,Accepted
+220,Wisconsin-Madison,North America,United States,Food/Energy,IGEM,12,Accepted
+219,Yeshiva_NYC,North America,United States,Foundational Advance,IGEM,5,Accepted
