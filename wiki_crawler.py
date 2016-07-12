@@ -6,6 +6,49 @@ import wiki_parser as wp
 import urllib
 import urllib2
 import sys
+from boilerpipe.extract import Extractor
+from optparse import OptionParser
+
+parser = OptionParser()
+parser.add_option("-p", "--pagelist", dest="PAGELIST", action="store_true",
+                  help="Parse the team page list.")
+parser.add_option("-r", "--results", dest="RESULTS", action="store_true",
+                  help="Parse the team page list.")
+parser.add_option("-i", "--infos", dest="INFOS", action="store_true",
+                  help="Parse the team page list.")
+parser.add_option("-c", "--contributions", dest="CONTRIBUTIONS", action="store_true",
+                  help="Parse the team page list.")
+parser.add_option("-v", "--pageview", dest="PAGEVIEW", action="store_true",
+                  help="Parse the team page views.")
+parser.add_option("-t", "--text", dest="TEXT", action="store_true",
+                  help="Extract the team pages text.")
+parser.add_option("-d", "--redo", dest="REDO", action="store_true",
+                  help="Relaunch parsing for team that had an error previously.")
+parser.add_option("-y", "--years", dest="YEARS", default=None,
+                  help="List of years to parse separated by a comma (ex: 2012,2016)")
+
+
+# Parse options into variables
+(options, args) = parser.parse_args()
+
+PAGEVIEW = options.PAGEVIEW
+RESULTS = options.RESULTS
+INFOS = options.INFOS
+CONTRIBUTIONS = options.CONTRIBUTIONS
+PAGELIST = options.PAGELIST
+TEXT = options.TEXT
+REDO = options.REDO
+YEARS = options.YEARS
+if YEARS:
+    YEARS = [i + '.csv' for i in YEARS.split(',')]
+
+test = 0
+for i in [PAGEVIEW, RESULTS, INFOS, CONTRIBUTIONS, PAGELIST, TEXT]:
+    if i is True:
+        test += 1
+if test == 0:
+    print "Please select at least one method, for help: ./wiki_crawler.py -h"
+    sys.exit(1)
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -25,29 +68,38 @@ sys.setdefaultencoding('utf8')
 #
 # Page Contrib
 # http://[YEAR].igem.org/wiki/index.php?title=Team:[TEAMNAME]/[PAGENAME]&action=history
+print """
+---------------------------------------------------------
+---------------------------------------------------------
 
-print """.___  ___________________   _____
-|   |/  _____/\_   _____/  /     \
-|   /   \  ___ |    __)_  /  \ /  \
+"""
+
+
+print """
+ ___  ___________________   _____
+|   |/  _____/\_   _____/  /     \.
+|   /   \  ___ |    __)_  /  \ /  \.
 |   \    \_\  \|        \/    Y    |
 |___|\______  /_______  /\____|__  /
-            \/        \/         \/ """
-print """__________                   __               __
+            \/        \/         \/
+__________                   __               __
 \______   \_______  ____    |__| ____   _____/  |_
  |     ___/\_  __ \/  _ \   |  |/ __ \_/ ___\   __|
  |    |     |  | \(  <_> )  |  \  ___/\  \___|  |
  |____|     |__|   \____/\__|  |\___  >\___  >__|
-                        \______|    \/     \/      """
+                        \______|    \/     \/
 
-print """  _________ __                 __             .___
+  _________ __                 __             .___
  /   _____//  |______ ________/  |_  ____   __| _/
  \_____  \|   __\__  \|_  __ \   __\/ __ \ / __ |
  /        \|  |  / __ \|  | \/|  | \  ___// /_/ |
 /_______  /|__| (____  /__|   |__|  \___  >____ |
         \/           \/                 \/     \/  """
 
-
-years = os.listdir('Teams/good')
+if not YEARS:
+    years = os.listdir('Teams/good')
+else:
+    years = YEARS
 
 # Storing which team have been done
 
@@ -65,29 +117,65 @@ try:
 except:
     pass
 # Opening the databases files
-teams_pages_db = file('results/team_pages_db.tsv', 'w')
-teams_pages_db.write('TeamID\tWikiPages\n')
+if PAGELIST:
+    if REDO:
+        teams_pages_db = file('results/team_pages_db.tsv', 'a')
+    else:
+        teams_pages_db = file('results/team_pages_db.tsv', 'w')
+    teams_pages_db.write('TeamID\tWikiPages\n')
 
-teams_info_db = file('results/teams_info_db.tsv', 'w')
-teams_info_db.write('TeamID\tTeamName\tTeamDesc\tTeamHSPrincipal\tTeamKind\tTeamDivision\tTeamRegion\tTeamCountry\tTeamSection\tTeamJambooree\tTeamTrack\tProjectTitle\tProjectAbstract\tPI_UID\tPI_Name\tSecondPI_UID\tSecondPI_Name\tInstructors_UID\tInstructors_Names\tStudentLeaders_UID\tStudentLeaders_Names\tStudentMembers_UID\tStudentMembers_Names\tAdvisors_UID\tAdvisors_Names\tPartNB_start\tPartNB_end\n')
+if RESULTS:
+    if REDO:
+        teams_results = file('results/team_results_db.tsv', 'a')
+        teams_awards = file('results/team_awards_db.tsv', 'a')
+    else:
+        teams_results = file('results/team_results_db.tsv', 'w')
+        teams_awards = file('results/team_awards_db.tsv', 'w')
+    teams_results.write('Year\tTeamName\tMedal\tChampionship\tnb of awards\tFinalist\tWinner\n')
+    teams_awards.write('Year\tTeamName\tAward\n')
+
+if INFOS:
+    if REDO:
+        teams_info_db = file('results/teams_info_db.tsv', 'a')
+    else:
+        teams_info_db = file('results/teams_info_db.tsv', 'w')
+    teams_info_db.write('TeamID\tTeamName\tTeamDesc\tTeamHSPrincipal\tTeamKind\tTeamDivision\tTeamRegion\tTeamCountry\tTeamSection\tTeamJambooree\tTeamTrack\tProjectTitle\tProjectAbstract\tPI_UID\tPI_Name\tSecondPI_UID\tSecondPI_Name\tInstructors_UID\tInstructors_Names\tStudentLeaders_UID\tStudentLeaders_Names\tStudentMembers_UID\tStudentMembers_Names\tAdvisors_UID\tAdvisors_Names\tPartNB_start\tPartNB_end\n')
 
 # user_contributions_db = file('results/user_contributions_db.tsv', 'w')
 # user_contributions_db.write('TeamID\tUserID\tPage\tDate\n')
 
-page_contributions_db = file('results/page_contributions_db.tsv', 'w')
-page_contributions_db.write('TeamID\tPage\tDate\tUserID\tByteSize\n')
+if CONTRIBUTIONS:
+    if REDO:
+        page_contributions_db = file('results/page_contributions_db.tsv', 'a')
+    else:
+        page_contributions_db = file('results/page_contributions_db.tsv', 'w')
+    page_contributions_db.write('TeamID\tPage\tDate\tUserID\tByteSize\n')
 
-page_view_db = file('results/page_view_db.tsv', 'w')
-page_view_db.write('Year\tPage\tPageView\n')
+if PAGEVIEW:
+    if REDO:
+        page_view_db = file('results/page_view_db.tsv', 'a')
+    else:
+        page_view_db = file('results/page_view_db.tsv', 'w')
+    page_view_db.write('Year\tPage\tPageView\n')
+
+if TEXT:
+    if REDO:
+        teams_pages_text_db = file('results/team_pages_text_db.tsv', 'a')
+    else:
+        teams_pages_text_db = file('results/team_pages_text_db.tsv', 'w')
+    teams_pages_text_db.write('Year\tTeamID\tPage\tPath\n')
 
 
 def CleanHTML(html):
+    """Clean HTML of potential tags that mess up with parsing."""
     html_escape_table = {
         "_-AND-_": "&amp;",
         '"': "&quot;",
         "'": "&apos;",
         ">": "&gt;",
         "<": "&lt;",
+        ' ': '<BR>',
+        ' ': '<br>',
     }
     for k in html_escape_table:
         html = html.replace(html_escape_table[k], k)
@@ -115,7 +203,7 @@ def PageView(y):
         offset += 5000
 
 
-def TeamPages(y, team):
+def TeamPages(y, team, write=True):
     """Parse List of pages of a given team."""
     if int(y) >= 2015:
         parser = wp.TeamPagesList2015()
@@ -131,8 +219,9 @@ def TeamPages(y, team):
     parser.feed(html)
     pagelist = parser.res
     pagelist = [str(unicode(i).encode('utf8')) for i in pagelist]
-    for i in pagelist:
-        teams_pages_db.write(str(teams_id[team_i]) + '\t' + i + '\n')
+    if write:
+        for i in pagelist:
+            teams_pages_db.write(str(teams_id[team_i]) + '\t' + i + '\n')
     return pagelist
 
 
@@ -170,27 +259,27 @@ def TeamInfo(y, team, team_i):
     teams_info_db.write(str(teams_id[team_i]) + '\t' + '\t'.join(team_info) + '\n')
 
 
-def UserContrib(y, usr, team, team_i):
-    """Parse User Contribution page."""
-    if int(y) >= 2015:
-        parser = wp.UserContribution2015()
-    else:
-        parser = wp.UserContribution()
-    url = "http://" + y + ".igem.org/wiki/index.php?title=Special:Contributions&limit=1000&target=" + usr
-    # log.write(url)
-    handle = urllib2.urlopen(url)
-    html = handle.read()
-    if "No changes were found matching these criteria" not in html:
-        html = CleanHTML(html)
-        parser.feed(html)
-        contribs = parser.res
-        # log.write("Grabbed ! Result: %s" % contribs)
-        for X in contribs:
-            user_contributions_db.write(str(teams_id[team_i]) + '\t' + usr + '\t' + '\t'.join(X) + '\n')
+# def UserContrib(y, usr, team, team_i):
+#     """Parse User Contribution page."""
+#     if int(y) >= 2015:
+#         parser = wp.UserContribution2015()
+#     else:
+#         parser = wp.UserContribution()
+#     url = "http://" + y + ".igem.org/wiki/index.php?title=Special:Contributions&limit=1000&target=" + usr
+#     # log.write(url)
+#     handle = urllib2.urlopen(url)
+#     html = handle.read()
+#     if "No changes were found matching these criteria" not in html:
+#         html = CleanHTML(html)
+#         parser.feed(html)
+#         contribs = parser.res
+#         # log.write("Grabbed ! Result: %s" % contribs)
+#         for X in contribs:
+#             user_contributions_db.write(str(teams_id[team_i]) + '\t' + usr + '\t' + '\t'.join(X) + '\n')
 
 
 def PageContrib(y, page, tp, team, team_i):
-    """Parce contribnution of each pages, also called history of a page."""
+    """Parse contribnution of each pages, also called history of a page."""
     if int(y) >= 2015:
         parser = wp.PageContributions2015()
     else:
@@ -213,6 +302,47 @@ def PageContrib(y, page, tp, team, team_i):
     return tp
 
 
+def Results(y, division):
+    """Parse the result page of IGEM."""
+    if division not in ['high_school', 'igem', 'ent']:
+        return False
+    url = "http://igem.org/Results?year=" + y + "&name=Championship&division=" + division
+    parser = wp.Results()
+    handle = urllib2.urlopen(url)
+    html = handle.read()
+    f = open('results/%s/%s_Results_%s.html' % (y, y, division), 'w')
+    f.write(html)
+    f.close()
+    html = CleanHTML(html)
+    parser.feed(html)
+    results = parser.res
+    # print results
+    for X in results:
+        res = [y, X['teamName'], X['teamMedal'], X['teamChampionship'], len(X['teamAwards']), X['teamFinalist'], X['teamWinner']]
+        res = [str(i) for i in res]
+        teams_results.write('\t'.join(res) + '\n')
+        for aw in X['teamAwards']:
+            awa = [y, X['teamName'], aw]
+            teams_awards.write('\t'.join(awa) + '\n')
+
+
+def Text_extractor(y, page, team, team_i):
+    """Extract the text of team pages using BoilerPipe."""
+    upage = urllib.quote_plus(page)
+    url = "http://" + y + ".igem.org/wiki/index.php?title=" + upage
+    extractor = Extractor(extractor='ArticleExtractor', url=url)
+    f = open('results/%s/%s/%s_-_-_CONTENT.html' % (y, team, page.replace('/', '#')), 'w')
+    f.write(extractor.getHTML())
+    f.close()
+    f = open('results/%s/%s/%s_-_-_TEXT.html' % (y, team, page.replace('/', '#')), 'w')
+    f.write(extractor.getText())
+    f.close()
+    path = 'results/%s/%s/%s_-_-_TEXT.html' % (y, team, page.replace('/', '#'))
+    # text = text.replace('\\n', '\\\\n')
+    output = '%s\t%s\t%s\t%s\n' % (y, str(teams_id[team_i]), page, path)
+    teams_pages_text_db.write(output)
+
+
 # iterate through all the years
 for year in years:
     # We parse the data
@@ -226,9 +356,16 @@ for year in years:
         os.mkdir('results/%s' % y)
     except:
         pass
-    PageView(y)
+    if PAGEVIEW:
+        PageView(y)
+
+    if RESULTS:
+        for div in ['high_school', 'igem', 'ent']:
+            Results(y, div)
 
     # we iterate throught all the teams
+    if REDO:
+        teams = [teams[i] for i in range(len(teams)) if teams_id[i] in done]
     for team in teams:
         try:
             os.mkdir('results/%s/%s' % (y, team))
@@ -238,10 +375,12 @@ for year in years:
         print "Doing team : %s of year %s" % (team, y)
         try:
             # we grab all the pages of the team
-            pagelist = TeamPages(y, team)
+            if PAGELIST:
+                pagelist = TeamPages(y, team)
 
             # Next we grab the user infos for this team
-            user_list = TeamInfo(y, team, team_i)
+            if INFOS:
+                user_list = TeamInfo(y, team, team_i)
 
             # # now we iterate through all users contributions (depreacated as contained in Page info)
             # for usr in user_list:
@@ -249,34 +388,49 @@ for year in years:
 
             # Now we iterate throught all the pages
             tp = 0
-            for page in pagelist:
-                tp = PageContrib(y, page, tp, team, team_i)
+            if CONTRIBUTIONS:
+                if not PAGELIST:
+                    pagelist = TeamPages(y, team, write=False)
+                for page in pagelist:
+                    tp = PageContrib(y, page, tp, team, team_i)
                 # print "number of contribs: ", tp
+
+            if TEXT:
+                if not PAGELIST:
+                    pagelist = TeamPages(y, team, write=False)
+                for page in pagelist:
+                    try:
+                        Text_extractor(y, page, team, team_i)
+                    except Exception as e:
+                        print "Error accessing page: ", page
+                        print e
         except Exception as e:
             print "ERROR !"
             print e
+            print page
             donelog = file('done.log', 'a')
             donelog.write(str(teams_id[team_i]) + '\n')
             donelog.close()
-
         team_i += 1
 
-teams_pages_db.close()
+# teams_pages_db.close()
 
-teams_info_db.close()
+# teams_info_db.close()
 
 # user_contributions_db.close()
 
-page_contributions_db.close()
+# page_contributions_db.close()
 
-
-print """.___  ___________________   _____
-|   |/  _____/\_   _____/  /     \
-|   /   \  ___ |    __)_  /  \ /  \
+print """
+---------------------------------------------------------
+---------------------------------------------------------
+.___  ___________________   _____
+|   |/  _____/\_   _____/  /     \.
+|   /   \  ___ |    __)_  /  \ /  \.
 |   \    \_\  \|        \/    Y    |
 |___|\______  /_______  /\____|__  /
-            \/        \/         \/ """
-print """__________                   __               __
+            \/        \/         \/
+__________                   __               __
 \______   \_______  ____    |__| ____   _____/  |_
  |     ___/\_  __ \/  _ \   |  |/ __ \_/ ___\   __|
  |    |     |  | \(  <_> )  |  \  ___/\  \___|  |

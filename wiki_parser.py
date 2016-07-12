@@ -569,6 +569,11 @@ class PageContributions2015(HTMLParser):
             if 'class' in attrs:
                 if attrs['class'] == "history-size":
                     self.entry = True
+        if 'class' in attrs:
+            if tag == 'span' and self.start and attrs['class'] == "history-user":
+                self.entry = True
+            if tag == 'a' and self.start and attrs['class'] == "mw-changeslist-date":
+                self.entry = True
 
             # self.tmp.append(attrs['title'])
             # print 'tmp', self.tmp
@@ -601,6 +606,98 @@ class PageContributions2015(HTMLParser):
                         self.tmp.append(data)
             # self.entry = False
             # print 'tmp', self.tmp
+
+
+class Results(HTMLParser):
+
+    def __init__(self):
+        HTMLParser.__init__(self)
+        self.teambar = False
+        self.resulticons = False
+        self.championshipbar = False
+        self.awardbar = False
+        self.entry = False
+        self.id = 0
+        self.tmp = None
+        self.res = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        # if self.start:
+        # print "Encountered a start tag:", tag
+        # print attrs
+        if tag == 'div':
+            if 'class' in attrs:
+                if attrs['class'] == "teambar":
+                    self.teambar = True
+                    if self.tmp is not None:
+                        self.res.append(self.tmp)
+                    self.tmp = {
+                        "teamName": None,
+                        "teamMedal": None,
+                        "teamChampionship": 0,
+                        "teamFinalist": 0,
+                        "teamWinner": 0,
+                        "teamAwards": []
+                    }
+
+        if tag == 'div':
+            if 'class' in attrs:
+                if attrs['class'] == "resulticons":
+                    if not self.championshipbar:
+                        self.resulticons = True
+
+        if tag == 'div':
+            if 'class' in attrs:
+                if attrs['class'] == "championshipbar":
+                    self.championshipbar = True
+                    self.tmp['teamChampionship'] = 1
+
+        if tag == 'div':
+            if 'class' in attrs:
+                if attrs['class'] == "awardbar":
+                    self.awardbar = True
+
+        if tag == 'img' and self.resulticons:
+            if 'class' in attrs:
+                if attrs['class'] == 'seal':
+                    if attrs['src'] == 'http://igem.org/images/medals/seal_bronze.png':
+                        self.tmp['teamMedal'] = 'bronze'
+                    elif attrs['src'] == 'http://igem.org/images/medals/seal_silver.png':
+                        self.tmp['teamMedal'] = 'silver'
+                    elif attrs['src'] == 'http://igem.org/images/medals/seal_gold.png':
+                        self.tmp['teamMedal'] = 'gold'
+                    elif attrs['src'] == 'http://igem.org/images/medals/seal_blocked.png':
+                        self.tmp['teamMedal'] = 'blocked'
+
+    def handle_endtag(self, tag):
+        # print "Encountered an end tag :", tag
+        if tag == 'div' and self.awardbar:
+            self.awardbar = False
+
+        if tag == 'div' and self.resulticons:
+            self.resulticons = False
+
+        if tag == 'div' and self.championshipbar:
+            self.championshipbar = False
+
+        if tag == 'a' and self.teambar:
+            self.teambar = False
+
+    def handle_data(self, data):
+        # print "Encountered some data  :", data
+        data = data.strip()
+        data = data.replace('\t ', ' ')
+
+        if self.teambar:
+            self.tmp['teamName'] = data.replace(' ', '_')
+
+        if self.awardbar:
+            self.tmp['teamAwards'].append(data)
+            if 'finalist' in data.lower():
+                self.tmp['teamFinalist'] = 1
+            if 'winner' in data.lower():
+                self.tmp['teamWinner'] = 1
 
 
 # instantiate the parser and fed it some HTML

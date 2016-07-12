@@ -10,15 +10,55 @@ page_view = pd.read_csv('results/page_view_db.tsv', sep='\t')
 page_contrib = pd.read_csv('results/page_contributions_db.tsv', sep='\t')
 team_pages = pd.read_csv('results/team_pages_db.tsv', sep='\t')
 teams_info = pd.read_csv('results/teams_info_db.tsv', sep='\t')
+team_result = pd.read_csv('results/team_results_db.tsv', sep='\t')
+team_awards = pd.read_csv('results/team_awards_db.tsv', sep='\t')
+teams_meta = pd.DataFrame()
+
 
 team_names = {}
 for year in years:
+    y = year.split('.')[0]
+    if y not in team_names:
+        team_names[y] = {}
     df = pd.read_csv('Teams/good/' + year)
     df = df.rename(columns={c: c.replace(' ', '') for c in df.columns})
+    teams_meta = pd.concat([teams_meta, df])
     for i in range(len(df)):
         tID = df['TeamID'][i]
-        t = df['Team'][i]
-        team_names[t] = tID
+        t = df['Team'][i].replace(' ', '_')
+        team_names[y][t] = tID
+
+res = []
+for i in range(len(team_result)):
+    y = str(team_result['Year'][i])
+    t = team_result['TeamName'][i]
+    print y, t
+    tID = team_names[y][t]
+    res.append(tID)
+
+team_result['TeamID'] = pd.Series(res, index=team_result.index)
+
+res = []
+for i in range(len(team_awards)):
+    y = str(team_awards['Year'][i])
+    t = team_awards['TeamName'][i]
+    print y, t
+    tID = team_names[y][t]
+    res.append(tID)
+
+team_awards['TeamID'] = pd.Series(res, index=team_awards.index)
+
+tID2Y = {}
+for y in team_names.keys():
+    for t in team_names[y].keys():
+        tID2Y[team_names[y][t]] = y
+
+res = []
+for i in range(len(page_contrib)):
+    tID = page_contrib['TeamID'][i]
+    res.append(tID2Y[tID])
+
+page_contrib['Year'] = pd.Series(res, index=page_contrib.index)
 
 res = []
 for i in range(len(page_view)):
@@ -70,4 +110,15 @@ for i in range(len(page_view)):
 
 page_view['TeamID'] = pd.Series(res, index=page_view.index)
 
+page_view = page_view.drop_duplicates()
+page_contrib = page_contrib.drop_duplicates()
+team_pages = team_pages.drop_duplicates()
+teams_info = teams_info.drop_duplicates()
+
 page_view.to_csv('results/page_view_db_cleaned.tsv', sep='\t', index=False)
+page_contrib.to_csv('results/page_contributions_db.tsv', sep='\t', index=False)
+team_pages.to_csv('results/team_pages_db.tsv', sep='\t', index=False)
+teams_info.to_csv('results/teams_info_db.tsv', sep='\t', index=False)
+team_result.to_csv('results/team_results_db.tsv', sep='\t', index=False)
+team_awards.to_csv('results/team_awards_db.tsv', sep='\t', index=False)
+teams_meta.to_csv('results/team_meta_db.tsv', sep='\t', index=False)
