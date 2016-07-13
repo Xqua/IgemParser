@@ -7,7 +7,7 @@ else
 fi
 day_ts=`cat old_ts`  
 timestamp=$(date +%s)
-xdelta results/delta page_view_db_$day_ts.tsv results/page_view_db.tsv results/page_view_db_$timestamp.patch
+xdelta delta results/page_view_db_$day_ts.tsv results/page_view_db.tsv results/page_view_db_$timestamp.patch
 tar -uf results/page_view_db_$day_ts.tar results/page_view_db_$timestamp.patch
 rm results/page_view_db_$timestamp.patch
 
