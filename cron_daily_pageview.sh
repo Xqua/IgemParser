@@ -1,10 +1,10 @@
 #!/bin/sh
 
-cd XXX
+cd /home/xqua/IgemParser
 
-day_ts = `cat old_ts`  
+day_ts=`cat old_ts`  
 gzip results/page_view_db_$day_ts.tar
-rm page_view_db_$day_ts.tsv
+rm results/page_view_db_$day_ts.tsv
 
 if python wiki_crawler.py -v -y 2016 ; then
     echo "Command succeeded"
