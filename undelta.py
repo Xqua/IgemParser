@@ -7,7 +7,7 @@ if not os.path.isdir('pageViews2016'):
     os.mkdir('pageViews2016')
 
 arch_path = sys.argv[1]
-name = arch_path.split('.')[0]
+name = arch_path.split('/')[-1].split('.')[0]
 
 if not os.path.isdir(name):
     os.mkdir(name)
