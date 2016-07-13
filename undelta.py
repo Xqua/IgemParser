@@ -19,7 +19,7 @@ main = [i for i in lfiles if 'tsv' in i][0]
 patches = [i for i in lfiles if 'patch' in i]
 
 for patch in patches:
-	print patch
+    print patch
     ts = patch.split('.')[0].split('_')[-1]
     n = 'page_view_db_%s.tsv' % ts
     cmd = 'xdelta patch %s %s %s' % (os.path.join(name, 'results', patch), os.path.join(name, 'results', main), os.path.join(name, 'results', n))
