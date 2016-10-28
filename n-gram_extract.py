@@ -9,6 +9,7 @@ from nltk.tokenize import sent_tokenize
 from nltk.corpus import wordnet
 from progressbar import Bar, ETA, Percentage, ProgressBar, Timer, Counter
 from scipy import stats
+import re
 
 import sys
 reload(sys)
@@ -53,6 +54,12 @@ def remove_dot(text):
 def in_wordnet(word):
     return True if word in all_lemmas else False
 
+
+def cleanHTMLtags(text):
+    p = re.compile("<[^>]*>")
+    text = p.sub(' ', text)
+    return text
+
 df = pd.read_csv('results/team_pages_text_db.tsv', sep='\t')
 
 lemmatizer = nltk.stem.WordNetLemmatizer()
@@ -91,6 +98,7 @@ for i in bar(range(len(df))):
     tpid[y][tID] += 1
     try:
         text = open(df['Path'][i]).read()
+        text = cleanHTMLtags(text)
         text = text.replace('"', '')
         text = text.replace('>', '')
         text = text.replace('<', '')

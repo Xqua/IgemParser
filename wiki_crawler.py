@@ -8,6 +8,8 @@ import urllib2
 import sys
 from boilerpipe.extract import Extractor
 from optparse import OptionParser
+from progressbar import Bar, ETA, Percentage, ProgressBar, Timer, Counter
+
 
 parser = OptionParser()
 parser.add_option("-p", "--pagelist", dest="PAGELIST", action="store_true",
@@ -22,6 +24,8 @@ parser.add_option("-v", "--pageview", dest="PAGEVIEW", action="store_true",
                   help="Parse the team page views.")
 parser.add_option("-t", "--text", dest="TEXT", action="store_true",
                   help="Extract the team pages text.")
+parser.add_option("-b", "--bioparts", dest="BIOPARTS", action="store_true",
+                  help="Extract the team bioparts.")
 parser.add_option("-d", "--redo", dest="REDO", action="store_true",
                   help="Relaunch parsing for team that had an error previously.")
 parser.add_option("-y", "--years", dest="YEARS", default=None,
@@ -33,6 +37,7 @@ parser.add_option("-y", "--years", dest="YEARS", default=None,
 
 PAGEVIEW = options.PAGEVIEW
 RESULTS = options.RESULTS
+BIOPARTS = options.BIOPARTS
 INFOS = options.INFOS
 CONTRIBUTIONS = options.CONTRIBUTIONS
 PAGELIST = options.PAGELIST
@@ -43,7 +48,7 @@ if YEARS:
     YEARS = [i + '.csv' for i in YEARS.split(',')]
 
 test = 0
-for i in [PAGEVIEW, RESULTS, INFOS, CONTRIBUTIONS, PAGELIST, TEXT]:
+for i in [PAGEVIEW, RESULTS, INFOS, CONTRIBUTIONS, PAGELIST, TEXT, BIOPARTS]:
     if i is True:
         test += 1
 if test == 0:
@@ -123,6 +128,10 @@ if PAGELIST:
     else:
         teams_pages_db = file('results/team_pages_db.tsv', 'w')
     teams_pages_db.write('TeamID\tWikiPages\n')
+
+if BIOPARTS:
+    bioparts_db = file('results/bioparts_db.tsv', 'w')
+    bioparts_db.write('Year\tTeamID\tTeamName\tBioPart\tAuthor\n')
 
 if RESULTS:
     if REDO:
@@ -259,6 +268,46 @@ def TeamInfo(y, team, team_i):
     teams_info_db.write(str(teams_id[team_i]) + '\t' + '\t'.join(team_info) + '\n')
 
 
+def BiopartsTeamList(y, write=True):
+    """Parse List of pages of a given team."""
+    parser = wp.TeamListBioParts()
+    url = "http://igem.org/Team_Parts?year=" + y
+    handle = urllib2.urlopen(url)
+    html = handle.read()
+    # f = open('results/%s/BioParts_teamList.html' % (y), 'w')
+    # f.write(html)
+    # f.close()
+    # html = CleanHTML(html)
+    parser.feed(html)
+    pagelist = parser.res
+    res = []
+    bar = ProgressBar(widgets=['Grabbing Biopart of year: %s ,,, Done:' % y, Counter(), '/', str(len(df)), Percentage(), Bar(), ETA(), '  ', Timer()])
+    for i in bar(range(len(pagelist))):
+        page = pagelist[i]
+        team = page.split('=')[-1]
+        res += Bioparts(page, y)
+    if write:
+        for i in res:
+            i = [str(j) for j in i]
+            bioparts_db.write(str(y) + '\t' + '\t'.join(i) + '\n')
+
+
+def Bioparts(url, y):
+    """Parse List of pages of a given team."""
+    team = url.split('=')[-1]
+    teamID = teamName2TeamID[team]
+    parser = wp.TeamBioParts(team, teamID)
+    handle = urllib2.urlopen(url)
+    html = handle.read()
+    # f = open('results/%s/%s/PageList.html' % (y, team), 'w')
+    # f.write(html)
+    # f.close()
+    html = CleanHTML(html)
+    parser.feed(html)
+    biopartlist = parser.res
+    return biopartlist
+
+
 # def UserContrib(y, usr, team, team_i):
 #     """Parse User Contribution page."""
 #     if int(y) >= 2015:
@@ -351,6 +400,9 @@ for year in years:
     df = pd.read_csv('Teams/good/%s' % year)
     teams = df[' Team  ']
     teams_id = df['Team ID ']
+    teamName2TeamID = {}
+    for i in range(len(teams_id)):
+        teamName2TeamID[teams[i]] = teams_id[i]
     team_i = 0
     try:
         os.mkdir('results/%s' % y)
@@ -363,6 +415,8 @@ for year in years:
         for div in ['high_school', 'igem', 'ent']:
             Results(y, div)
 
+    if BIOPARTS:
+        BiopartsTeamList(y)
     # we iterate throught all the teams
     if REDO:
         teams = [teams[i] for i in range(len(teams)) if teams_id[i] in done]

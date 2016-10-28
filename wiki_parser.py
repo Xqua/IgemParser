@@ -38,6 +38,54 @@ class TeamPagesList(HTMLParser):
         # print "Encountered some data  :", data
 
 
+class TeamListBioParts(HTMLParser):
+
+    def __init__(self):
+        HTMLParser.__init__(self)
+        self.res = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'a':
+            if 'style' in attrs:
+                if "font-size:12px;line-height:15px;font-weight:600;color:blue" in attrs['style']:
+                    self.res.append(attrs['href'])
+
+
+class TeamBioParts(HTMLParser):
+
+    def __init__(self, team, teamID):
+        HTMLParser.__init__(self)
+        self.start = False
+        self.team = team
+        self.teamID = teamID
+        self.tmp = [self.teamID, self.team]
+        self.res = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        # if self.start:
+        # print "Encountered a start tag:", tag
+        # print attrs
+        if tag == 'a':
+            if 'class' in attrs:
+                if attrs['class'] == "noul_link part_link":
+                    self.tmp.append(attrs['href'].split(':')[-1])
+                    # print "START"
+
+        if tag == 'td':
+            if 'width' in attrs:
+                if attrs['width'] == '100px':
+                    self.start = True
+
+    def handle_data(self, data):
+        if self.start:
+            self.tmp.append(data)
+            self.start = False
+            self.res.append(self.tmp)
+            self.tmp = [self.teamID, self.team]
+
+
 class TeamPagesList2015(HTMLParser):
 
     def __init__(self):
