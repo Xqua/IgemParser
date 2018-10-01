@@ -1,5 +1,9 @@
-from HTMLParser import HTMLParser
+#from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 from datetime import datetime
+from bs4 import BeautifulSoup
+import requests
+
 
 # create a subclass and override the handler methods
 
@@ -117,6 +121,131 @@ class TeamPagesList2015(HTMLParser):
             self.start = False
 
 
+class TeamInfo:
+    def __init__(self, year, name, teamID):
+        self.year = year
+        self.name = name
+        self.teamID = teamID
+
+    def get_team_info_page(self, teamID, counter=0):
+        try:
+            r = requests.get('http://igem.org/Team.cgi?team_id={}'.format(teamID))
+            html = r.content
+            soup = BeautifulSoup(html, 'html.parser')
+            return soup
+        except:
+            counter += 1
+            if counter > 10:
+                print("Error getting or parsing teamID: {}".format(teamID))
+                return None
+            else:
+                self.get_team_info_page(teamID, counter=counter)
+
+    def parse_table_abstract(self, table, results = {}):
+        tds = table.findAll('td')
+        results['Title'] = tds[0].text.split('\n')[0]
+        results['Abstract'] = tds[1].text.strip()
+        return results
+
+    def parse_track_table(self, table, results = {}):
+        text = table.findAll('td')[0].text.strip()
+        if 'Assigned Track' in text:
+            track = text.split(':')[1].strip()
+            results['Track'] = track
+        else:
+            results['Track'] = "None"
+        return results
+
+    def parse_userline(self, line):
+        userId = line.split('<a')[1].split('</a>')[0].split('>')[1]
+        name = line.split('</a>')[1].split('<td>')[0].split('<td')[1].split('>')[1]
+        return userId, name
+
+    def parse_rooster_table(self, table, results = {}):
+        lines = str(table).split('\n')
+        sections = {}
+        tmp = []
+        title = ""
+        for line in lines:
+            if '<b>' in line:
+                if tmp:
+                    sections[title] = tmp
+                title = line.split('<b>')[1].split('</b>')[0].split('[')[0].strip()
+                tmp = []
+            else:
+                if title:
+                    if "Non-editable Member" in line:
+                        tmp.append(line)
+        if tmp:
+            sections[title] = tmp
+
+    #     results = {}
+
+        for section in sections:
+            for line in sections[section]:
+                if section not in results:
+                    results[section] = {'userId':[], 'userName':[]}
+                try:
+                    userId, name = self.parse_userline(line)
+                    results[section]['userId'].append(userId)
+                    results[section]['userName'].append(name)
+                except:
+                    pass
+
+        return results
+
+    def parse_team(self, teamID):
+        results = {}
+
+        soup = self.get_team_info_page(teamID)
+        tables = soup.find_all('table')
+        for table in tables:
+            if 'id' in table.attrs:
+#                 print(table.attrs['id'])
+                if table.attrs['id'] == 'table_roster':
+                    results = self.parse_rooster_table(table, results)
+                if table.attrs['id'] == 'table_abstract':
+                    results = self.parse_table_abstract(table, results)
+                if table.attrs['id'] == 'table_tracks':
+                    results = self.parse_track_table(table, results)
+
+        return results
+
+    def make_member_table(self, data):
+        res = []
+        member_keys = [  'Primary PI',
+                         'Instructors',
+                         'Student Members',
+                         'Advisors',
+                         'Secondary PI',
+                         'Student Leaders',
+                         'Other']
+        for k in data:
+            if k in member_keys:
+                for i in range(len(data[k]['userId'])):
+                    res.append([self.year,
+                                self.teamID,
+                                self.name,
+                                k,
+                                data[k]['userId'][i].replace('\n',' ').replace('\r','').replace('\t',' ').strip(),
+                                data[k]['userName'][i].replace('\n',' ').replace('\r','').replace('\t',' ').strip()
+                                ])
+        return res
+
+    def make_team_table(self, data):
+        team_keys = ['Track',
+                     'Title',
+                     'Abstract']
+        res = []
+        for k in data:
+            if k in team_keys:
+                res.append([self.year,
+                            self.teamID,
+                            self.name,
+                            k,
+                            data[k].replace('\n',' ').replace('\r','').replace('\t',' ').strip()])
+        return res
+
 class TeamPage(HTMLParser):
 
     def __init__(self):
@@ -136,6 +265,33 @@ class TeamPage(HTMLParser):
         self.tmp = []
         self.tmp2 = []
         self.res = []
+        # self.res = {"TeamID":"",
+        #             "TeamName":"",
+        #             "TeamDesc":"",
+        #             "TeamHSPrincipal":"",
+        #             "TeamKind":"",
+        #             "TeamDivision":"",
+        #             "TeamRegion":"",
+        #             "TeamCountry":"",
+        #             "TeamSection":"",
+        #             "TeamJambooree":"",
+        #             "TeamTrack":"",
+        #             "ProjectTitle":"",
+        #             "ProjectAbstract":"",
+        #             "PI_UID":"",
+        #             "PI_Name":"",
+        #             "SecondPI_UID":"",
+        #             "SecondPI_Name":"",
+        #             "Instructors_UID":"",
+        #             "Instructors_Names":"",
+        #             "StudentLeaders_UID":"",
+        #             "StudentLeaders_Names":"",
+        #             "StudentMembers_UID":"",
+        #             "StudentMembers_Names":"",
+        #             "Advisors_UID":"",
+        #             "Advisors_Names":"",
+        #             "PartNB_start":"",
+        #             "PartNB_end":""}
         self.i = 0
 
     def handle_starttag(self, tag, attrs):
